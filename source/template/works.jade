@@ -48,7 +48,8 @@ html
             | что обо мне говорят
         .comments__main
           .comments__block
-            img.comments__block-img
+            .wrapper__block-img
+              img.comments__block-img(src="/assets/img/avatar/Kov-Dm.jpg" alt="Kovalchuk")
             .comments__block-text.
               Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессоных ночей!
             .comments__block-footer
@@ -58,7 +59,8 @@ html
                 | - основатель Loftschool
 
           .comments__block
-            img.comments__block-img
+            .wrapper__block-img
+              img.comments__block-img(src="/assets/img/avatar/zar.jpg" alt="Zar")
             .comments__block-text.
               Этот код выдержит любые испытания.<br> Только пожалуйста, не загружайте сайт на слишком старых браузерах!
             .comments__block-footer
@@ -66,5 +68,14 @@ html
                 | Зар Захаров
               .footer__avtor-about
                 | - главный преподаватель
+
+
+      .container__feedback
+        h2.about__info-h2 СВЯЗАТЬСЯ СО МНОЙ
+        form.feedback__form
+          input.form__input(type="text", value="Имя")
+          input.form__input(type="text", value="Email")
+          textarea.form__textarea Ваше сообщение
+
 
 

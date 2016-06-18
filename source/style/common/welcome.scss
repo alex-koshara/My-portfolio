@@ -32,13 +32,15 @@ ul {
   display: block;
   outline: none;
   color: $white;
-  border: 1px solid $white;
+  outline: 1px solid $white;
+  border: none;
   align-self: center;
   padding: 15px 20px;
   background:none;
 
   &:hover {
     background: #083c96;
+    outline: 1px solid #083c96;
     border: none;
    
   }
