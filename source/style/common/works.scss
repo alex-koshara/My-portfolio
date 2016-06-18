@@ -140,8 +140,8 @@
 
 .container__feedback {
   background: rgba(218, 219, 214, .1);
-  padding: 20px 20px 0 20px;
-
+  padding-top: 20px;
+  margin-bottom: 80px;
   .about__info-h2 {
     color: white;
     margin-bottom: 20px;
@@ -171,4 +171,26 @@
 .form__textarea {
   padding: 15px;
   min-height: 140px;
+}
+
+.wrapper__button {
+  display: flex;
+  width: 320px;
+}
+
+.button__inner {
+  flex: 1 0 50%;
+  outline: none;
+  border: none;
+  color: white;
+  padding: 15px 0;
+  cursor: pointer;
+}
+
+.button__inner-ok {
+  background: #004cd1;
+}
+
+.button__inner-cancel {
+  background: none;
 }
