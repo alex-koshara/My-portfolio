@@ -1,0 +1,70 @@
+doctype html
+include common/_mixin
+html
+  include common/_head
+  body
+    <!--[if lt IE 7]>
+    <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
+    <![endif]-->
+    
+
+    .bg-container.bg-container__about
+      include common/elements/traingle1.html
+      .container__main
+        nav.nav
+          include common/socials
+          .nav__hamburher
+            a.nav__hamburher-link
+              include common/soc-svg/hamburger.html
+        
+        .container__avatar
+          .container__avatar-bg
+            include common/stars/stars1.html
+          include common/_avatar
+
+    
+    .container__slider
+      .slider__preview
+        .preview__wrapper
+          img.slider__img(src="#")
+      .slider__skills
+        h2.about__info-h2 САЙТ ШКОЛЫ ОНЛАЙН ОБРАЗОВАНИЯ 
+        .slider__skills-text
+          | HTML, CSS, JAVASCRIPT
+        a.slider__link-show(href="#")
+          | Посмотреть сайт
+      .slider__nav
+        .slider__nav-prev
+          .preview__wrapper
+            img.prev__slider-img(src="#")
+        .slider__nav-next
+          .preview__wrapper
+            img.next__slider-img(src="#")
+
+    .container__comments
+      .comments__wrapper
+        .comments__header
+          h2.comments__header-h2
+            | что обо мне говорят
+        .comments__main
+          .comments__block
+            img.comments__block-img
+            .comments__block-text.
+              Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессоных ночей!
+            .comments__block-footer
+              .footer__avtor-fullName
+                | Ковальчук Дмитрий
+              .footer__avtor-about
+                | - основатель Loftschool
+
+          .comments__block
+            img.comments__block-img
+            .comments__block-text.
+              Этот код выдержит любые испытания.<br> Только пожалуйста, не загружайте сайт на слишком старых браузерах!
+            .comments__block-footer
+              .footer__avtor-fullName
+                | Зар Захаров
+              .footer__avtor-about
+                | - главный преподаватель
+
+

@@ -1,0 +1,96 @@
+ @import 'common/prop';
+
+
+.container__slider {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.preview__wrapper {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   outline: 2px solid red;
+}
+
+.slider__preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 257px;
+  background: #e3e2de;
+}
+
+.slider__img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: red;
+}
+
+.slider__skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 30px;
+
+  .slider__skills-text {
+    text-align: center;
+    color: #243994;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+  .slider__link-show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 185px;
+    height: 40px;
+    color: white;
+    background: #004cd1;
+    text-decoration: none;
+  }
+
+}
+
+.slider__nav {
+  display: flex;
+  justify-content: center;
+}
+
+.slider__nav-prev,
+.slider__nav-next {
+  width: 320px;
+  height: 100%;
+
+  .preview__wrapper {
+    height: 95px;
+  }
+}
+
+.prev__slider-img,
+.next__slider-img {
+  flex: 0 0 50%;
+  display: block;
+  height: 50%;
+}
+
+.prev__slider-img {
+  background: yellow;
+}
+
+.next__slider-img {
+  background: black;
+}
+
+.container__comments {
+  background: url("/assets/img/bg/saturate-iphone.jpg");
+}
+
+.comments__header-h2 {
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+}

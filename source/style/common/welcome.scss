@@ -1,0 +1,158 @@
+@import 'common/prop';
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.bg-container {
+  width: 100%;
+  height: 600px;
+  background: url("/assets/img/bg/bg-1800.jpg") no-repeat 50% 60%;
+  background-size: cover;
+}
+
+.container-welcome {
+  display: flex;
+  justify-content: center;
+  min-height: 568px;
+}
+
+.welcome__fontAuth {
+  width: 300px;
+  min-height: 568px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.auth {
+  cursor: pointer;
+  display: block;
+  outline: none;
+  color: $white;
+  border: 1px solid $white;
+  align-self: center;
+  padding: 15px 20px;
+  background:none;
+
+  &:hover {
+    background: #083c96;
+    border: none;
+   
+  }
+}
+
+.abouthMe {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: $welcome-bg;
+}
+
+.abouthMe__avatar {
+  padding-top: 40px;
+  margin-bottom: 23px;
+}
+
+.abouthMe__avatar-img {
+  display: block;
+  height: 142px;
+  width: 142px;
+  margin: auto;
+  border-radius: 71px; /* Радиус скругления */
+  box-shadow: 0 0 7px #666; /* Параметры тени */
+}
+
+.abouthMe__fullName {
+  color: $white;
+  font-size: 21px;
+  line-height: 28px;
+  text-align: center;
+  z-index: 333;
+  margin: 0;
+}
+
+.abouthMe__text {
+  font-size: 14px;
+  line-height: 24px;
+  color: white;
+  text-align: center;
+}
+
+.social-icon {
+  fill: blue;
+  size: 40px;
+  opacity: .7;
+  &:hover {
+    opacity: 1;
+  }
+}
+ 
+.abouthMe__social {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  list-style: none;
+  width: 140px;
+  margin-bottom: 40px;
+}
+
+.abouthMe__social-welcome {
+  margin: 0 auto;
+  margin-bottom: 35px;
+}
+
+.abouthMe__myInfo {
+  display: flex;
+  list-style: none;
+}
+
+.abouthMe__myInfo-item {
+  flex: 1 0 auto;
+}
+
+.abouthMe__social-item a,
+.abouthMe__myInfo-item a {
+  text-decoration: none;
+}
+
+.abouthMe__myInfo-item a {
+  display: block;
+  padding: 15px 0;
+  font-size: 14px;
+  color: $white;
+  border-right: 2px solid rgba( 255, 255, 255, .5);
+  text-align: center;
+  background: $welcome-footer-bg;
+  &:hover {
+    background: #004cd1;
+  }
+
+}
+
+.abouthMe__myInfo-item:last-child a {
+    border: none;
+  }
+
+
+
+.footer {
+  color: $lightGrey;
+  &__copyright {
+    margin-bottom: 5px;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    text-decoration: underline;
+  }
+  &__text {
+    margin: 0;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    text-decoration: underline;
+  }
+}

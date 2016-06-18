@@ -1,0 +1,7 @@
+mixin my_skill(skill_name, circle_class)
+  li.skill__item-inner.
+    <svg width="170" height="170" class="g-circles">
+      <circle cy="85" r="50" cx="85" stroke="#ccc" fill="none"></circle>
+      <circle cx="185" r="50" cy="85" transform="rotate(-90 135 135)" class="sector #{circle_class}"></circle>
+    </svg>
+    <span class="skill__value">#{skill_name}</span>

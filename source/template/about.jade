@@ -1,0 +1,69 @@
+doctype html
+include common/_mixin
+html
+  include common/_head
+  body
+    <!--[if lt IE 7]>
+    <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
+    <![endif]-->
+    
+
+    .bg-container.bg-container__about
+      include common/elements/traingle.html
+      .container__main
+        nav.nav
+          include common/socials
+          .nav__hamburher
+            a.nav__hamburher-link
+              include common/soc-svg/hamburger.html
+        
+        .container__avatar
+          .container__avatar-bg
+            include common/stars/stars1.html
+          include common/_avatar
+      
+
+    .container__about
+      h1.main__about
+        | ОБО МНЕ
+      
+      .container__avatar
+        img(class="" src="/assets/img/avatar/avar.jpg" alt="Александр Кошара")
+      
+      .about__info
+        h2.about__info-h2 КТО Я
+        .about__info-text.
+          Я веб разработчик из Симферополя. Мне 25 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+          <br>
+          Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+
+        
+    section.info__skill
+      h2.about__info-h2 чем я могу быть вам полезен
+      .about__info-text.
+        Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+
+      ul.skill__container
+        include common/skills
+
+    .about__info
+      h2.about__info-h2 КОНТАКТЫ
+      ul.contact__list.contact__list-about
+        li.contact__item
+          img.contact__img(href="/assets/img/awesome/skype_n.svg" alt="Skype")
+          a.contact__link(href="skype:alex.koshara1990?call") skype: alex.koshara1990
+
+        li.contact__item
+          a.contact__link(href="mailto:alex-koshara@mail.ru") alex-koshara@mail.ru
+           
+        li.contact__item
+          include common/soc-svg/phone_marker.html
+          a.contact__link(href="tel:+79787759827") +7 (978) 775 98 27
+           
+        li.contact__item
+          include common/soc-svg/map_marker.html
+          .contact__link Россия, Республика Крым, Симферополь.
+
+  
+    footer.footer__container
+      include common/footer

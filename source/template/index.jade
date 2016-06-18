@@ -1,0 +1,33 @@
+doctype html
+include common/_mixin
+html
+  include common/_head
+  body
+    <!--[if lt IE 7]> 
+    <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
+    <![endif]-->
+
+    .bg-container
+      .container-welcome
+        .welcome__fontAuth
+          button(type="button")#auth.auth Авторизоваться
+          .abouthMe
+            include common/_avatar
+
+            h1.abouthMe__fullName Кошара Александр
+            p.abouthMe__text Личный сайт веб разработчика
+
+            ul.abouthMe__social.abouthMe__social-welcome
+              li.abouthMe__social-item: a(href="vk.com/alex_koshara"): include common/soc-svg/_vk.html
+              li.abouthMe__social-item: a(class="abouthMe__social-a" href="https://github.com/alex-koshara"): include common/soc-svg/_git.html
+              li.abouthMe__social-item: a(class="abouthMe__social-a" href="https://github.com/alex-koshara"): include common/soc-svg/_linkIn.html
+
+            ul.abouthMe__myInfo
+              li.abouthMe__myInfo-item: a( target="_blank" class="abouthMe__social-a" href="works.html") Мои работы
+              li.abouthMe__myInfo-item: a( target="_blank" href="/about.html") Обо мне
+              li.abouthMe__myInfo-item: a( target="_blank" href="blog.html") Блог
+ 
+          footer.footer
+            p.footer__copyright &copy; Александр Кошара
+            p.footer__text создано с любовью в LoftSchool 2016
+

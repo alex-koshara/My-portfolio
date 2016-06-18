@@ -1,0 +1,208 @@
+@import 'common/prop';
+
+.box {
+  width: 100%;
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+}
+
+.traingle {
+  fill: $white;
+}
+
+.bg-container {
+	padding: 10px;
+	position: relative;
+	margin-bottom: 35px;
+}
+
+.container__main {
+	min-height: 450px;
+	display: flex;
+	margin: auto;
+	position: relative;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 64px;
+}
+
+.abouthMe__social-svg .social-icon {
+	fill: $white;
+	opacity: 1;
+	&:hover {
+		fill: blue;
+	}
+}
+
+.nav__hamburher-link .hamburger {
+	fill: $white;
+	width: 26px;
+	height: 28px;
+	cursor: pointer;
+	&:hover {
+	fill: blue;
+	}
+}
+
+.container__avatar {
+	position: relative;
+}
+
+.container__avatar .abouthMe__avatar {
+	position: relative;
+	z-index: 4;
+}
+
+.container__avatar-bg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 200px;
+	transform: translate(-70%,-50%);
+	opacity: .5;
+	z-index: 1;
+}
+
+.abouthMe__avatar-img {
+	z-index: 2;
+}
+
+.main__about {
+	text-align: center;
+	color: $white;
+	margin-bottom: 20px;
+}
+
+.main__description {
+	text-align: center;
+	color: $white;
+	margin: 0;
+}
+
+.blog__content {
+	padding: 10px;	
+}
+
+.content__post {
+	padding-bottom: 25px;
+	border-bottom: 4px solid #f1f1f2;
+	&:last-child {
+		border-bottom: none;
+	}
+
+	.post__caption {
+		color: #474b57;
+	}
+
+	.post__data {
+		color: #5b7db7;
+		margin-bottom: 15px;
+	}
+
+	.post__text {
+		min-width: 320px;
+		word-wrap: break-word;
+		color: black;
+	}
+}
+
+.container__flex {
+	display: flex;
+	flex-direction: column;
+	background: #3e4049;
+	padding: 10px;
+	justify-content: flex-start;
+}
+
+.container__text {
+	text-align: center;
+	color: $white;
+	opacity: .6;
+}
+
+.container__links {
+	.abouthMe__list {
+		margin-bottom: 15px;
+	}
+	
+	.abouthMe__social {
+		margin-bottom: 0;
+	}
+	
+	.contact__list {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		list-style: none;
+
+		.contact__item {
+			text-align: center;
+		}
+	}
+}
+
+.contact__link {
+	text-decoration: none;
+	color: $white;
+	opacity: .5;
+	display: block;
+	padding: 5px 0;
+}
+
+.abouthMe__list {
+	display: flex;
+	list-style: none;
+
+	.abouthMe__item {
+		flex: 1 0 auto;
+		.abouthMe__link {
+			text-decoration: none;
+			color: $white;
+		}
+	}
+}
+
+.abouthMe__social-blog {
+    width: 100%;
+	justify-content: center;
+	
+	.abouthMe__social-item {
+		margin-right: 25px;
+
+	}
+}
+
+
+
+.social__blog .social-icon {
+	fill: $white;
+}
+
+.container__text,
+.abouthMe__social-blog {
+	border-bottom: 1px solid rgba(#fff, .5s);
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+}
+
+.footer__copyright-blog {
+	background: #2667d8;
+	
+	.footer__copyright {
+		margin: 0;
+		color: $white;
+		opacity: .6;
+	}
+
+	.footer__text {
+		color: $white;
+		opacity: .6;
+	}
+}
+
