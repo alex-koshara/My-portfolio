@@ -7,27 +7,62 @@ html
     <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
     <![endif]-->
 
-    .bg-container
-      .container-welcome
-        .welcome__fontAuth
-          button(type="button")#auth.auth Авторизоваться
-          .abouthMe
-            include common/_avatar
+    .bg__container
+      .wrapper__welcome
+        .container__welcome#flipper
+          .welcome__fontAuth#flipperHelp
+            button(type="button")#auth.auth Авторизоваться
+            .abouthMe
+              include common/_avatar
 
-            h1.abouthMe__fullName Кошара Александр
-            p.abouthMe__text Личный сайт веб разработчика
+              h1.abouthMe__fullName Кошара Александр
+              p.abouthMe__text Личный сайт веб разработчика
 
-            ul.abouthMe__social.abouthMe__social-welcome
-              li.abouthMe__social-item: a(href="vk.com/alex_koshara"): include common/soc-svg/_vk.html
-              li.abouthMe__social-item: a(class="abouthMe__social-a" href="https://github.com/alex-koshara"): include common/soc-svg/_git.html
-              li.abouthMe__social-item: a(class="abouthMe__social-a" href="https://github.com/alex-koshara"): include common/soc-svg/_linkIn.html
+              ul.abouthMe__social.abouthMe__social-welcome
+                li.abouthMe__social-item: a(href="vk.com/alex_koshara"): include common/soc-svg/_vk.html
+                li.abouthMe__social-item: a(class="abouthMe__social-a" href="https://github.com/alex-koshara"): include common/soc-svg/_git.html
+                li.abouthMe__social-item: a(class="abouthMe__social-a" href="https://github.com/alex-koshara"): include common/soc-svg/_linkIn.html
 
-            ul.abouthMe__myInfo
-              li.abouthMe__myInfo-item: a( target="_blank" class="abouthMe__social-a" href="works.html") Мои работы
-              li.abouthMe__myInfo-item: a( target="_blank" href="/about.html") Обо мне
-              li.abouthMe__myInfo-item: a( target="_blank" href="blog.html") Блог
+              ul.abouthMe__myInfo
+                li.abouthMe__myInfo-item: a( target="_blank" class="abouthMe__social-a" href="works.html") Мои работы
+                li.abouthMe__myInfo-item: a( target="_blank" href="/about.html") Обо мне
+                li.abouthMe__myInfo-item: a( target="_blank" href="blog.html") Блог
+
+
+          .welcome__backAuth
+            .abouthMe
+              h2.backAuth__header АВТОРИЗИРУЙТЕСЬ  
+              form.backAuth__form
+                label.backAuth__form-label
+                  label.backAuth__form-icon
+                    include ../images/svg/login.svg
+                  input.backAuth__form-text(type="text" placeholder="Логин")
+                label.backAuth__form-label
+                  label.backAuth__form-icon
+                    include ../images/svg/password.svg
+                  input.backAuth__form-text(type="password" placeholder="Пароль")
+                input.backAuth__form-checkbox(type="checkbox" id="noRobot")
+                label.backAuth__form-checkLabel(for="noRobot") Я человек
+                span.backAuth__form-span
+                  | Вы точно не робот?
+                .backAuth__wrapper-radio
+                  input.backAuth__form-radio(type="radio" name="robot" id="NoRobotRadio") 
+                  label.backAuth__form-radioLabel(for="NoRobotRadio") 
+                    | Да
+                  input.backAuth__form-radio(type="radio" name="robot" id="YesRobotRadio") 
+                  label.backAuth__form-radioLabel(for="YesRobotRadio")
+                      | Не уверен
+
+              ul.abouthMe__myInfo
+                li.abouthMe__myInfo-item: a#returnBack(class="abouthMe__social-a" href="#") На главную
+                li.abouthMe__myInfo-item: a( target="_blank" href="/about.html") Войти
+             
  
-          footer.footer
+        footer.footer
             p.footer__copyright &copy; Александр Кошара
             p.footer__text создано с любовью в LoftSchool 2016
+
+
+        
+
 

@@ -18,7 +18,7 @@
 }
 
 .container__main {
-	min-height: 450px;
+	min-height: 250px;
 	display: flex;
 	margin: auto;
 	position: relative;
@@ -29,7 +29,7 @@
 .nav {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 64px;
+	/*margin-bottom: 64px; */
 }
 
 .abouthMe__social-svg .social-icon {

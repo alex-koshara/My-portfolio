@@ -1,18 +1,44 @@
  @import 'common/prop';
 
 
+.wrapper__traingle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 85px;
+  background: rgba(#000, .85);
+
+  .box {
+    bottom: 81px;
+    .traingle {
+      fill: rgba(#000, .85);
+      }
+  }
+}
+
+.bg-container__works:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 150px;
+  border-left: 8px solid white;
+  border-bottom: 8px solid white;
+  display: block;
+  width: 25px;
+  height: 25px;
+  z-index: 10;
+  transform: translate(-50%) rotate(-45deg);
+}
+
+
 .container__slider {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
 
-.preview__wrapper {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   outline: 2px solid red;
-}
+
 
 .slider__preview {
   display: flex;
@@ -25,9 +51,6 @@
 
 .slider__img {
   display: block;
-  width: 100px;
-  height: 100px;
-  background: red;
 }
 
 .slider__skills {
@@ -60,34 +83,49 @@
   justify-content: center;
 }
 
+.preview__wrapper {
+  width: 320px;
+  max-height: 257px;
+}
+
 .slider__nav-prev,
 .slider__nav-next {
   width: 320px;
-  height: 100%;
+  min-height: 96px;
+  position: relative;
 
-  .preview__wrapper {
-    height: 95px;
+
+  .preview__wrapper-nav {
+    max-width: 160px;
+    max-height: 90px;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(#b6b7bf, .5);
+      z-index: 31;
+      top: 0;
+      left: 0;
+    }
+
   }
 }
 
 .prev__slider-img,
 .next__slider-img {
-  flex: 0 0 50%;
+  flex: 0 2 50%;
   display: block;
   height: 50%;
-}
-
-.prev__slider-img {
-  background: yellow;
-}
-
-.next__slider-img {
-  background: black;
 }
 
 .container__comments {
   background: url("/assets/img/bg/saturate-iphone.jpg");
   padding: 10px;
+  padding-top: 0;
 }
 
 .comments__header-h2 {
@@ -161,7 +199,7 @@
 .form__textarea {
   opacity: .4;
   margin-bottom: 20px;
-  width: 260px;
+  max-width: 260px;
 }
 
 .form__input {

@@ -4,13 +4,12 @@
 	content: "";
 	position: absolute;
 	left: 50%;
-	bottom: 50px;
+	bottom: 80px;
 	border-left: 8px solid white;
 	border-bottom: 8px solid white;
 	display: block;
 	width: 25px;
 	height: 25px;
-	opacity: .5;
 	z-index: 10;
 	transform: translate(-50%) rotate(-45deg);
 }
@@ -85,6 +84,7 @@ img {
 
 .skill__item-inner {
 	position: relative;
+	margin-right: 10px;
 }
 
 .skill__list {
@@ -97,6 +97,7 @@ img {
 .skill__name {
 	display: block;
 	text-align: center;
+	color: #474b57;
 }
 
 .skill__item {
@@ -111,6 +112,7 @@ img {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	color: #243994;
 }
 
 .html5 {
@@ -132,7 +134,43 @@ img {
 		
 		.contact__link {
 		  color: #6b6e78;
-		  display: inline;
+		  display: inline-block;
+		  vertical-align: middle;
+	
 	  }
 	}
+}
+
+.contact__item-icon {
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	background: #004cd1;
+	position: relative;
+	vertical-align: middle;
+	margin: 0 10px 10px 10px;
+	
+	svg {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+	  margin: auto;
+	  display: inline-block;
+	}
+}
+
+.background__map {
+	width: 320px;
+	height: 566px;
+	background: url("/assets/img/bg/map.jpg")
+}
+
+.footer__about {
+	    margin-top: -20px;
+	    opacity: .8;
+    
+
 }

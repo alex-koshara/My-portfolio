@@ -8,7 +8,7 @@ html
     <![endif]-->
     
 
-    .bg-container.bg-container__about
+    .bg__container.bg-container__about
       include common/elements/traingle.html
       .container__main
         nav.nav
@@ -29,7 +29,7 @@ html
       
       .container__avatar
         img(class="" src="/assets/img/avatar/avar.jpg" alt="Александр Кошара")
-      
+      1
       .about__info
         h2.about__info-h2 КТО Я
         .about__info-text.
@@ -50,20 +50,25 @@ html
       h2.about__info-h2 КОНТАКТЫ
       ul.contact__list.contact__list-about
         li.contact__item
-          img.contact__img(href="/assets/img/awesome/skype_n.svg" alt="Skype")
+          span.contact__item-icon
+            include ../images/svg/skype.html
           a.contact__link(href="skype:alex.koshara1990?call") skype: alex.koshara1990
 
         li.contact__item
+          span.contact__item-icon
+            include ../images/svg/envelope2.html
           a.contact__link(href="mailto:alex-koshara@mail.ru") alex-koshara@mail.ru
            
         li.contact__item
-          include common/soc-svg/phone_marker.html
+          span.contact__item-icon
+            include ../images/svg/phone.html
           a.contact__link(href="tel:+79787759827") +7 (978) 775 98 27
            
         li.contact__item
-          include common/soc-svg/map_marker.html
+          span.contact__item-icon
+            include ../images/svg/map_marker.html
           .contact__link Россия, Республика Крым, Симферополь.
 
-  
-    footer.footer__container
+    .background__map
+    footer.footer__container.footer__about
       include common/footer

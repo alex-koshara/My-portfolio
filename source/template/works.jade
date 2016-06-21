@@ -8,8 +8,9 @@ html
     <![endif]-->
     
 
-    .bg-container.bg-container__about
-      include common/elements/traingle1.html
+    .bg__container.bg-container__works
+      .wrapper__traingle
+        include common/elements/traingle1.html
       .container__main
         nav.nav
           include common/socials
@@ -26,7 +27,7 @@ html
     .container__slider
       .slider__preview
         .preview__wrapper
-          img.slider__img(src="#")
+          img.slider__img(src="/assets/img/works/demoWorks.png")
       .slider__skills
         h2.about__info-h2 САЙТ ШКОЛЫ ОНЛАЙН ОБРАЗОВАНИЯ 
         .slider__skills-text
@@ -35,11 +36,11 @@ html
           | Посмотреть сайт
       .slider__nav
         .slider__nav-prev
-          .preview__wrapper
-            img.prev__slider-img(src="#")
+          .preview__wrapper-nav
+            img.prev__slider-img(src="/assets/img/works/demo1.jpg")
         .slider__nav-next
-          .preview__wrapper
-            img.next__slider-img(src="#")
+          .preview__wrapper-nav
+            img.next__slider-img(src="/assets/img/works/demo2.jpg")
 
     .container__comments
       .comments__wrapper
