@@ -9,7 +9,7 @@ html
     
 
     .bg__container.bg-container__about
-      include common/elements/traingle.html
+      include common/elements/traingle.html 
       .container__main
         nav.nav
           include common/socials
@@ -24,51 +24,55 @@ html
       
 
     .container__about
-      h1.main__about
-        | ОБО МНЕ
-      
-      .container__avatar
-        img(class="" src="/assets/img/avatar/avar.jpg" alt="Александр Кошара")
-      1
+      .wrapper__about-adaptive
+        section.main__about
+          h1.main__about-h1
+            | ОБО МНЕ
+          
+          .container__avatar
+            img(class="avatar" src="assets/img/avatar/avar.jpg" alt="Александр Кошара")
+
+          .about__info-me
+            h2.about__info-h2 КТО Я
+            .about__info-text.
+              Я веб разработчик из Симферополя. Мне 25 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+              <br>
+              Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+
+          
+        section.info__skill
+          h2.about__info-h2 чем я могу быть вам полезен
+          .about__info-text.
+            Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+
+          ul.skill__container
+            include common/skills
+
+
+    .wrapper__info-about
       .about__info
-        h2.about__info-h2 КТО Я
-        .about__info-text.
-          Я веб разработчик из Симферополя. Мне 25 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-          <br>
-          Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+        h2.about__info-h2 КОНТАКТЫ
+        ul.contact__list.contact__list-about
+          li.contact__item
+            span.contact__item-icon
+              include ../images/svg/skype.html
+            a.contact__link(href="skype:alex.koshara1990?call") skype: alex.koshara1990
 
-        
-    section.info__skill
-      h2.about__info-h2 чем я могу быть вам полезен
-      .about__info-text.
-        Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+          li.contact__item
+            span.contact__item-icon
+              include ../images/svg/envelope2.html
+            a.contact__link(href="mailto:alex-koshara@mail.ru") alex-koshara@mail.ru
+             
+          li.contact__item
+            span.contact__item-icon
+              include ../images/svg/phone.html
+            a.contact__link(href="tel:+79787759827") +7 (978) 775 98 27
+             
+          li.contact__item
+            span.contact__item-icon
+              include ../images/svg/map_marker.html
+            .contact__link Россия, РК, Симферополь
 
-      ul.skill__container
-        include common/skills
-
-    .about__info
-      h2.about__info-h2 КОНТАКТЫ
-      ul.contact__list.contact__list-about
-        li.contact__item
-          span.contact__item-icon
-            include ../images/svg/skype.html
-          a.contact__link(href="skype:alex.koshara1990?call") skype: alex.koshara1990
-
-        li.contact__item
-          span.contact__item-icon
-            include ../images/svg/envelope2.html
-          a.contact__link(href="mailto:alex-koshara@mail.ru") alex-koshara@mail.ru
-           
-        li.contact__item
-          span.contact__item-icon
-            include ../images/svg/phone.html
-          a.contact__link(href="tel:+79787759827") +7 (978) 775 98 27
-           
-        li.contact__item
-          span.contact__item-icon
-            include ../images/svg/map_marker.html
-          .contact__link Россия, Республика Крым, Симферополь.
-
-    .background__map
-    footer.footer__container.footer__about
-      include common/footer
+      .background__map
+        footer.footer__container.footer__about
+          include common/footer

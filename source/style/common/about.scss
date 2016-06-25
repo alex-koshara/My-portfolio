@@ -1,5 +1,19 @@
 @import 'common/prop';
 
+.bg-container__about {
+	.box {
+		.traingle {
+		fill: #f2f0e8;
+
+		@include desctop {
+			.polygon-right {
+				fill: #f4f5f0;
+			}
+		}
+		}
+	}
+}
+
 .bg-container__about:after {
 	content: "";
 	position: absolute;
@@ -15,14 +29,61 @@
 }
 
 .container__about {
-	padding-left: 10px;
-	padding-right: 10px;
+	background: #f2f0e8;
+	min-height: 650px;
 }
 
+.wrapper__about-adaptive {
+
+	@include desctop {
+		display: flex;
+	}
+
+
+}
+
+
 .container__about .main__about  {
-	color: #373e42;
+	
+	
 	margin: 0;
 	margin-bottom: 35px;
+
+	@include desctop {
+		width: 50%;
+		margin: 0 auto 20px auto;
+	}
+
+	@include hd {
+		display: flex;
+		flex-wrap: wrap;
+		align-content: flex-start;
+		justify-content: flex-end;
+	}
+}
+
+.main__about-h1 {
+	color: #373e42;
+	font: 24px/42px, "Roboto-Regular", "Arial", sans-serif;
+	font-size: 35px;
+	margin-top: 20px;
+
+	@include hd {
+		font-size: 63px;
+		margin-top: 6px;
+	}
+	
+}
+
+.container__avatar {
+	@include tablet {
+		width: 60%;
+		margin: 0 auto;
+	}
+
+	@include hd {
+		width: 50%;
+	}
 }
 
 img {
@@ -30,13 +91,50 @@ img {
 	height: auto;
 }
 
+svg .traingle .polygon-left {
+	background: red !important;
+	fill: red !important;
+}
+
+.wrapper__info-about {
+	position: relative;
+	min-height: 400px;
+    .about__info {
+	    @include tablet {
+		    position: absolute;
+		    top: 20%;
+		    left: 50%;
+		    transform: translateX(-50%);
+		    width: 350px;
+		    background: rgba(#fff, .7);
+		}
+
+		
+	}
+}
+
+.about__info-me {
+	@include hd {
+			width: 50%;
+		}
+}
+
 .about__info-h2 {
+    font-family: "Roboto-Regular", "Arial", sans-serif;
+    font-size: 21px;
+    line-height: 28px;
 	display: block;
 	text-align: center;
 	color: #474b57;
-	padding: 0 75px 25px 75px;
+	padding-bottom: 25px;
+	text-align: center;
 	position: relative;
 	text-transform: uppercase;
+
+	@include tablet {
+		width: 70%;
+		margin: 15px auto;
+	}
 
 	&:after {
 		content: "";
@@ -51,14 +149,43 @@ img {
 	}
 }
 
+.info__skill .about__info-h2 {
+	
+
+	@include desctop {
+		width: 200px;
+		margin: 0 auto 15px auto;
+	}
+
+}
+
 .about__info-text {
+    font-family: "Roboto-Regular", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 24px;
 	color: #474b57;
 	margin-bottom: 55px;
+
+	@include tablet {
+		width: 60%;
+		margin: 0 auto;
+	}
+
+	@include desctop {
+		width: 90%;
+		text-align: left;
+	}
+
 }
 
 .info__skill {
 	background: #f4f5f0;
-	padding: 0 10px;
+	padding-bottom: 15px;
+
+
+	@include desctop {
+		width: 50%;
+	}
 }
 
 .g-circles {
@@ -74,12 +201,24 @@ img {
 
 .skill__container {
 	style-list: none;
+	@include tablet {
+		width: 65%;
+		margin: 0 auto;
+	}
+
+	@include desctop {
+		width: 90%;
+		margin: 0 auto;
+	}
 }
 
 .skill__item {
 	display: flex;
 	flex-direction: column;
-	margin-bottom: 25px;
+	margin-bottom: 10px;
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 
 .skill__item-inner {
@@ -92,12 +231,24 @@ img {
 	flex-wrap: wrap;
 	justify-content: center;
 	list-style: none;
+
+	@include desctop {
+		justify-content: flex-start;
+	}
 }
 
 .skill__name {
+    font-family: "Roboto-Regular", "Arial", sans-serif;
+    font-size: 21px;
+    line-height: 28px;
 	display: block;
 	text-align: center;
 	color: #474b57;
+	margin: 15px 0 15px;
+
+	@include desctop {
+		text-align: left;
+	}
 }
 
 .skill__item {
@@ -128,11 +279,16 @@ img {
 }
 
 .contact__list-about {
-	
+	list-style: none;
 	.contact__item {
 		color: #6b6e78;
+
+		@include tablet {
+			margin-bottom: 5px;
+		}
 		
 		.contact__link {
+		  font-size: 16px;
 		  color: #6b6e78;
 		  display: inline-block;
 		  vertical-align: middle;
@@ -163,14 +319,43 @@ img {
 }
 
 .background__map {
-	width: 320px;
-	height: 566px;
-	background: url("/assets/img/bg/map.jpg")
+	background: url("../img/bg/map.jpg");
+	min-height: 516px;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-end;
+	position: relative;
+	
+	@include tablet {
+		height: 907px;
+		justify-content: flex-end;
+
+	}
 }
 
 .footer__about {
-	    margin-top: -20px;
-	    opacity: .8;
+	opacity: .8;
+	margin-bottom: -70%;
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+
+
+	@include tablet {
+		margin-bottom: 0;
+		margin-top: auto;
+		positon: static;
+	}
+	.aboutMe__list {
+	  font: 14px/24px "Roboto-Medium", "Arial", sans-serif;
+	}
+
+	.contact__list {
+	  font: 14px/24px "Roboto-Light", "Arial", sans-serif;
+	}
     
 
 }

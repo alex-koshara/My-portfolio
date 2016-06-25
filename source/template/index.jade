@@ -9,28 +9,28 @@ html
 
     .bg__container
       .wrapper__welcome
+        button(type="button")#auth.auth Авторизоваться
         .container__welcome#flipper
           .welcome__fontAuth#flipperHelp
-            button(type="button")#auth.auth Авторизоваться
-            .abouthMe
+            .aboutMe
               include common/_avatar
 
-              h1.abouthMe__fullName Кошара Александр
-              p.abouthMe__text Личный сайт веб разработчика
+              h1.aboutMe__fullName Кошара Александр
+              p.aboutMe__text Личный сайт веб разработчика
 
-              ul.abouthMe__social.abouthMe__social-welcome
-                li.abouthMe__social-item: a(href="vk.com/alex_koshara"): include common/soc-svg/_vk.html
-                li.abouthMe__social-item: a(class="abouthMe__social-a" href="https://github.com/alex-koshara"): include common/soc-svg/_git.html
-                li.abouthMe__social-item: a(class="abouthMe__social-a" href="https://github.com/alex-koshara"): include common/soc-svg/_linkIn.html
+              ul.aboutMe__social.aboutMe__social-welcome
+                li.aboutMe__social-item: a(href="vk.com/alex_koshara"): include common/soc-svg/_vk.html
+                li.aboutMe__social-item: a(class="aboutMe__social-a" href="https://github.com/alex-koshara"): include common/soc-svg/_git.html
+                li.aboutMe__social-item: a(class="aboutMe__social-a" href="https://github.com/alex-koshara"): include common/soc-svg/_linkIn.html
 
-              ul.abouthMe__myInfo
-                li.abouthMe__myInfo-item: a( target="_blank" class="abouthMe__social-a" href="works.html") Мои работы
-                li.abouthMe__myInfo-item: a( target="_blank" href="/about.html") Обо мне
-                li.abouthMe__myInfo-item: a( target="_blank" href="blog.html") Блог
+              ul.aboutMe__myInfo
+                li.aboutMe__myInfo-item: a(class="aboutMe__social-a" href="works.html") Мои работы
+                li.aboutMe__myInfo-item: a(class="aboutMe__social-a" href="about.html") Обо мне
+                li.aboutMe__myInfo-item: a(class="aboutMe__social-a" href="blog.html") Блог
 
 
           .welcome__backAuth
-            .abouthMe
+            .aboutMe
               h2.backAuth__header АВТОРИЗИРУЙТЕСЬ  
               form.backAuth__form
                 label.backAuth__form-label
@@ -53,9 +53,9 @@ html
                   label.backAuth__form-radioLabel(for="YesRobotRadio")
                       | Не уверен
 
-              ul.abouthMe__myInfo
-                li.abouthMe__myInfo-item: a#returnBack(class="abouthMe__social-a" href="#") На главную
-                li.abouthMe__myInfo-item: a( target="_blank" href="/about.html") Войти
+              ul.aboutMe__myInfo
+                li.aboutMe__myInfo-item: a#returnBack(class="aboutMe__social-a" href="#") На главную
+                li.aboutMe__myInfo-item: a( href="index.html") Войти
              
  
         footer.footer

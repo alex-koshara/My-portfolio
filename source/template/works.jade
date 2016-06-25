@@ -10,6 +10,8 @@ html
 
     .bg__container.bg-container__works
       .wrapper__traingle
+        h1.main__about
+          | МОИ РАБОТЫ
         include common/elements/traingle1.html
       .container__main
         nav.nav
@@ -26,32 +28,32 @@ html
     
     .container__slider
       .slider__preview
-        .preview__wrapper
-          img.slider__img(src="/assets/img/works/demoWorks.png")
+        img.slider__preview-img(src="assets/img/works/demoWorks.png")
       .slider__skills
-        h2.about__info-h2 САЙТ ШКОЛЫ ОНЛАЙН ОБРАЗОВАНИЯ 
-        .slider__skills-text
-          | HTML, CSS, JAVASCRIPT
-        a.slider__link-show(href="#")
-          | Посмотреть сайт
+        .wrapper__skills
+          h2.about__info-h2 САЙТ ШКОЛЫ ОНЛАЙН ОБРАЗОВАНИЯ 
+          .slider__skills-text
+            | HTML, CSS, JAVASCRIPT
+          a.slider__link-show(href="#")
+            | Посмотреть сайт
       .slider__nav
         .slider__nav-prev
-          .preview__wrapper-nav
-            img.prev__slider-img(src="/assets/img/works/demo1.jpg")
+          img.prev__slider-img(src="assets/img/works/demo1.jpg")
         .slider__nav-next
-          .preview__wrapper-nav
-            img.next__slider-img(src="/assets/img/works/demo2.jpg")
+          img.next__slider-img(src="assets/img/works/demo2.jpg")
+
+
 
     .container__comments
-      .comments__wrapper
-        .comments__header
+      .comments__header
           h2.comments__header-h2
             | что обо мне говорят
         .comments__main
           .comments__block
             .wrapper__block-img
-              img.comments__block-img(src="/assets/img/avatar/Kov-Dm.jpg" alt="Kovalchuk")
-            .comments__block-text.
+              img.comments__block-img(src="assets/img/avatar/Kov-Dm.jpg" alt="Kovalchuk")
+            .comments__block-text
+              img.comments__block-quote(src="assets/img/bg/quotes.svg")
               Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессоных ночей!
             .comments__block-footer
               .footer__avtor-fullName
@@ -59,10 +61,12 @@ html
               .footer__avtor-about
                 | - основатель Loftschool
 
+         
           .comments__block
             .wrapper__block-img
-              img.comments__block-img(src="/assets/img/avatar/zar.jpg" alt="Zar")
-            .comments__block-text.
+              img.comments__block-img(src="assets/img/avatar/zar.jpg" alt="Zar")
+            .comments__block-text
+              img.comments__block-quote(src="assets/img/bg/quotes.svg")
               Этот код выдержит любые испытания.<br> Только пожалуйста, не загружайте сайт на слишком старых браузерах!
             .comments__block-footer
               .footer__avtor-fullName
@@ -72,18 +76,18 @@ html
 
 
       .container__feedback
-        h2.about__info-h2 СВЯЗАТЬСЯ СО МНОЙ
+        h2.about__info-h2.feedback__info-text СВЯЗАТЬСЯ СО МНОЙ
         form.feedback__form
-          input.form__input(type="text", value="Имя")
-          input.form__input(type="text", value="Email")
-          textarea.form__textarea Ваше сообщение
+          input.form__input(type="text", placeholder="Имя")
+          input.form__input(type="text", placeholder="Email")
+          textarea.form__textarea(placeholder="Ваше сообщение")
           .wrapper__button
             button.button__inner.button__inner-ok отправить
             button.button__inner.button__inner-cancel отмена
 
 
-    footer.footer__container
-      include common/footer
+      footer.footer__container.footer__work
+        include common/footer
 
 
 

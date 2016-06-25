@@ -1,14 +1,17 @@
 @import 'common/prop';
+@import 'common/mixin';
 
 ul {
   margin: 0;
   padding: 0;
 }
 
+
+
 .bg__container {
   width: 100%;
   min-height: 100vh;
-  background: url("/assets/img/bg/bg-1800.jpg") no-repeat 50% 60%;
+  background: url("../img/bg/bg-1800.jpg") no-repeat 50% 60%;
   background-size: cover;
   padding: 20px;
   position: relative;
@@ -18,19 +21,30 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 508px;
+  min-height: 400px;
   position: relative;
   padding: 10px;
   width: 320px;
-  margin: 0 auto;
   transition: .8s;
+  margin: 0 auto;
   transform-style: preserve-3d;
+
+  @include laptop {
+    margin-bottom: 300px;
+  }
+
+  @include desctop {
+    margin-bottom: 100px;
+  }
+
+  @include hd {
+    margin-bottom: 100px;
+  }
 }
 
 .welcome__fontAuth,
 .welcome__backAuth {
-  width: 300px;
-  min-height: 568px;
+  min-height: 368px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -39,6 +53,23 @@ ul {
   top: 0;
   left: 0;
   backface-visibility: hidden;
+}
+
+.welcome__fontAuth {
+  @include laptop {
+    // width: 748px;
+  }
+
+  @include desctop {
+    // width: 1180px;
+  }
+
+  @include hd {
+  }
+}
+
+.welcome__backAuth {
+  font-family: "Roboto-Regular", "Arial", sans-serif;
 }
 
 .auth {
@@ -51,7 +82,25 @@ ul {
   align-self: center;
   padding: 15px 20px;
   background:none;
+  margin: 0 auto;
   margin-bottom: 30px;
+  transition: margin-bottom, opacity .8s;
+  
+  @include laptop {
+    margin-left: auto;
+    margin-right: 30px;
+    margin-bottom: 200px;
+  }
+
+  @include desctop {
+    margin-bottom: 75px;
+  }
+
+  @include hd {
+    margin-bottom: 175px;
+  }
+
+
 
   &:hover {
     background: #083c96;
@@ -61,20 +110,32 @@ ul {
   }
 }
 
-.abouthMe {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background: $welcome-bg;
-  width: 300px;
+.visible {
+  opacity: 0;
+  cursor: default;
 }
 
-.abouthMe__avatar {
+.aboutMe {
+  background: $welcome-bg;
+  width: 300px;
+
+  @include laptop {
+    width: 345px;
+  }
+
+  @include desctop {
+    width: 380px;
+  }
+
+
+}
+
+.aboutMe__avatar {
   padding-top: 40px;
   margin-bottom: 23px;
 }
 
-.abouthMe__avatar-img {
+.aboutMe__avatar-img {
   display: block;
   height: 142px;
   width: 142px;
@@ -83,7 +144,7 @@ ul {
   box-shadow: 0 0 7px #666; /* Параметры тени */
 }
 
-.abouthMe__fullName {
+.aboutMe__fullName {
   color: $white;
   font-size: 21px;
   line-height: 28px;
@@ -92,7 +153,7 @@ ul {
   margin: 0;
 }
 
-.abouthMe__text {
+.aboutMe__text {
   font-size: 14px;
   line-height: 24px;
   color: white;
@@ -108,7 +169,7 @@ ul {
   }
 }
  
-.abouthMe__social {
+.aboutMe__social {
   padding: 0;
   display: flex;
   justify-content: space-between;
@@ -118,26 +179,27 @@ ul {
   margin-bottom: 40px;
 }
 
-.abouthMe__social-welcome {
+.aboutMe__social-welcome {
   margin: 0 auto;
   margin-bottom: 35px;
 }
 
-.abouthMe__myInfo {
+.aboutMe__myInfo {
+  font-family: "Roboto-Medium", "Arial", sans-serif;
   display: flex;
   list-style: none;
 }
 
-.abouthMe__myInfo-item {
+.aboutMe__myInfo-item {
   flex: 1 0 auto;
 }
 
-.abouthMe__social-item a,
-.abouthMe__myInfo-item a {
+.aboutMe__social-item a,
+.aboutMe__myInfo-item a {
   text-decoration: none;
 }
 
-.abouthMe__myInfo-item a {
+.aboutMe__myInfo-item a {
   display: block;
   padding: 15px 0;
   font-size: 14px;
@@ -151,19 +213,19 @@ ul {
 
 }
 
-.abouthMe__myInfo-item:last-child a {
+.aboutMe__myInfo-item:last-child a {
     border: none;
   }
 
 
 .welcome__backAuth {
-  padding-top: 87px;
   transform: rotateY(180deg);
   color: black;
   z-index: 3;
 }
 
 .backAuth__header {
+  font-family: "Roboto-Regular", "Arial", sans-serif;
   text-align: center;
   color: $white;
 }
@@ -254,6 +316,8 @@ ul {
 }
 
 .backAuth__form-span {
+  font-family: "Roboto-Bold", "Arial", sans-serif;
+  color: $white;
   display: block;
   text-align: center;
   margin-bottom: 10px;
@@ -265,6 +329,7 @@ ul {
 }
 
 .backAuth__form-radioLabel {
+  color: $white;
   cursor: pointer;
   margin-bottom: 25px;
   display: inline-block;
@@ -282,6 +347,7 @@ ul {
 .footer {
   color: $lightGrey;
   &__copyright {
+    font-family: "Roboto-Light", "Arial", sans-serif;
     margin-bottom: 5px;
     font-size: 14px;
     line-height: 24px;
@@ -289,6 +355,7 @@ ul {
     text-decoration: underline;
   }
   &__text {
+    font-family: "Roboto-Light", "Arial", sans-serif;
     margin: 0;
     font-size: 14px;
     line-height: 24px;
