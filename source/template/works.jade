@@ -17,7 +17,7 @@ html
         nav.nav
           include common/socials
           .nav__hamburher
-            a.nav__hamburher-link
+            a.nav__hamburher-link#mainNav(href="#")
               include common/soc-svg/hamburger.html
         
         .container__avatar
@@ -36,10 +36,12 @@ html
             | HTML, CSS, JAVASCRIPT
           a.slider__link-show(href="#")
             | Посмотреть сайт
-      .slider__nav
-        .slider__nav-prev
+      .slider__control
+        .slider__control-prev
+          a.control__down(href="#") up
           img.show__slider-img(src="assets/img/works/demo1.jpg")
-        .slider__nav-next
+        .slider__control-next
+          a.control__up(href="#") down
           img.show__slider-img(src="assets/img/works/demo2.jpg")
 
 

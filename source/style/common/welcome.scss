@@ -188,10 +188,12 @@ ul {
   font-family: "Roboto-Medium", "Arial", sans-serif;
   display: flex;
   list-style: none;
+  flex-wrap: wrap;
 }
 
 .aboutMe__myInfo-item {
   flex: 1 0 auto;
+
 }
 
 .aboutMe__social-item a,
@@ -201,7 +203,7 @@ ul {
 
 .aboutMe__myInfo-item a {
   display: block;
-  padding: 15px 0;
+  padding: 15px 10px;
   font-size: 14px;
   color: $white;
   border-right: 2px solid rgba( 255, 255, 255, .5);
