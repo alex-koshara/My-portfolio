@@ -3,86 +3,86 @@
 .bg-container__about {
 	.box {
 		.traingle {
-		fill: #f2f0e8;
+			fill: #f2f0e8;
 
-		@include desctop {
-			.polygon-right {
-				fill: #f4f5f0;
+			@include desctop {
+				.polygon-right {
+					fill: #f4f5f0;
+				}
 			}
-		}
 		}
 	}
 }
 
 @keyframes slideInLeft {
-  from {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-    visibility: visible;
-    opacity: 0;
-  }
-  30% {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-    visibility: visible;
-    opacity: 0;
-  }
+	from {
+		-webkit-transform: translate3d(-100%, 0, 0);
+		transform: translate3d(-100%, 0, 0);
+		visibility: visible;
+		opacity: 0;
+	}
+	30% {
+		-webkit-transform: translate3d(-100%, 0, 0);
+		transform: translate3d(-100%, 0, 0);
+		visibility: visible;
+		opacity: 0;
+	}
 
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
+	to {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+		opacity: 1;
+	}
 }
 
 @keyframes slideInRight {
-  from {
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-    visibility: visible;
-    opacity: 0;
-  }
+	from {
+		-webkit-transform: translate3d(100%, 0, 0);
+		transform: translate3d(100%, 0, 0);
+		visibility: visible;
+		opacity: 0;
+	}
 
-  30% {
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-    visibility: visible;
-    opacity: 0;
-  }
+	30% {
+		-webkit-transform: translate3d(100%, 0, 0);
+		transform: translate3d(100%, 0, 0);
+		visibility: visible;
+		opacity: 0;
+	}
 
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
+	to {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+		opacity: 1;
+	}
 }
 
 @keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-  }
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(-100%, 0, 0);
+		transform: translate3d(-100%, 0, 0);
+	}
 
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
+	to {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
 }
 
 @keyframes fadeInRight {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-  }
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(100%, 0, 0);
+		transform: translate3d(100%, 0, 0);
+	}
 
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
+	to {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
 }
 
 
@@ -94,70 +94,70 @@
 	z-index: 1000;
 
 	.popup__close {
-	  display: block;
-	  position: absolute;
-	  z-index: 1002;
-	  top: 23px;
-	  right: 23px;
-	  width: 20px;
-	  height: 20px;
-	  cursor: pointer;
+		display: block;
+		position: absolute;
+		z-index: 1002;
+		top: 23px;
+		right: 23px;
+		width: 20px;
+		height: 20px;
+		cursor: pointer;
 
-	  &:after {
-	  	content: "";
-	  	position: absolute;
-	  	top:50%;
-	  	left: 50%;
-	  	border-top: 4px solid white;
-	  	width: 35px;
-	  	transform: translate(-50%,-50%) rotate(45deg);
-	  	z-index: 1004;
+		&:after {
+			content: "";
+			position: absolute;
+			top:50%;
+			left: 50%;
+			border-top: 4px solid white;
+			width: 35px;
+			transform: translate(-50%,-50%) rotate(45deg);
+			z-index: 1004;
 
-	  	&:hover {
-	  	  border-top: 4px solid $hover__link;
-	  	}
-	  }
+			&:hover {
+				border-top: 4px solid $hover__link;
+			}
+		}
 
-	  &:before {
-	  	content: "";
-	  	position: absolute;
-	  	top:50%;
-	  	left: 50%;
-	  	border-top: 4px solid white;
-	  	width: 35px;
-	  	transform: translate(-50%,-50%) rotate(-45deg);
-	  	z-index: 1004;
-	  }
+		&:before {
+			content: "";
+			position: absolute;
+			top:50%;
+			left: 50%;
+			border-top: 4px solid white;
+			width: 35px;
+			transform: translate(-50%,-50%) rotate(-45deg);
+			z-index: 1004;
+		}
 	}
 
 	.popup__left-bg {
-	  animation: fadeInLeft .5s linear;
-	  position: absolute;
-	  background: rgba(#183669, .87);
-	  width: 50%;
-	  top: 0;
-	  left: 0;
-	  height: 100%;
-	  z-index: 1001;
+		animation: fadeInLeft .5s linear;
+		position: absolute;
+		background: rgba(#183669, .87);
+		width: 50%;
+		top: 0;
+		left: 0;
+		height: 100%;
+		z-index: 1001;
 	}
 
 	.popup__right-bg {
-	  animation: fadeInRight .5s linear;
-	  position: absolute;
-	  background: rgba(#183669, .87);
-	  top: 0;
-	  left: 50%;
-	  height: 100%;
-	  width: 50%;
-	  z-index: 1001;
+		animation: fadeInRight .5s linear;
+		position: absolute;
+		background: rgba(#183669, .87);
+		top: 0;
+		left: 50%;
+		height: 100%;
+		width: 50%;
+		z-index: 1001;
 	}
 
 	.popup__nav {
-	  position: fixed;
-	  top: 50%;
-	  left: 50%;
-	  transform: translate(-50%, -50%);
-	  z-index: 1002;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 1002;
 	}
 }
 
@@ -167,93 +167,59 @@
 
 .popup__nav {
 	.aboutMe__list {
-	  flex-direction: column;
+		flex-direction: column;
 	}
 
 	.aboutMe__item {
-	  animation: slideInLeft .7s linear;
-	  margin-bottom: 10px;
-	  
+		animation: slideInLeft .7s linear;
+		margin-bottom: 10px;
+
 
 	}
 
 	.aboutMe__item:nth-child(2n) {
-	  animation: slideInRight .7s linear;
+		animation: slideInRight .7s linear;
 	}
 
 	.aboutMe__link {
-	  display: block;
-	  font-size: 63px;
-	  text-align: center;
-	  padding: 10px;
-	  position: relative;
+		display: block;
+		font-size: 63px;
+		text-align: center;
+		padding: 10px;
+		position: relative;
 
-	  &:hover.aboutMe__link:after {
-	    content: "";
-	    position: absolute;
-	    display: block;
-	    bottom: 0;
-	    left: 50%;
-	    transform: translateX(-50%);
-	    z-index: 1003;
-	    width: 75px;
-	    height: 5px;
-	    background: $white;
-	    transition: all .5s linear;
-	  }
+		&:hover.aboutMe__link:after {
+			content: "";
+			position: absolute;
+			display: block;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 1003;
+			width: 75px;
+			height: 5px;
+			background: $white;
+			transition: all .5s linear;
+		}
 	}
 
 	.aboutMe__link-active {
-	  position: relative;
+		position: relative;
 
-	  &:after {
-	    content: "";
-	    position: absolute;
-	    display: block;
-	    bottom: 0;
-	    left: 50%;
-	    transform: translateX(-50%);
-	    z-index: 1003;
-	    width: 75px;
-	    height: 5px;
-	    background: $white;
-	  }
+		&:after {
+			content: "";
+			position: absolute;
+			display: block;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 1003;
+			width: 75px;
+			height: 5px;
+			background: $white;
+		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -291,16 +257,12 @@
 	@include desctop {
 		display: flex;
 	}
-
-
 }
 
-
 .container__about .main__about  {
-	
-	
 	margin: 0;
 	margin-bottom: 35px;
+	position: relative;
 
 	@include desctop {
 		width: 50%;
@@ -320,14 +282,39 @@
 	font: 24px/42px, "Roboto-Regular", "Arial", sans-serif;
 	font-size: 35px;
 	margin-top: 20px;
+	position: relative;
+	z-index: 220;
 
 	@include hd {
 		font-size: 63px;
 		margin: 0 auto;
 		margin-top: 6px;
-
 	}
-	
+}
+
+.main__about-stars {
+	display: none;
+
+	@include hd {
+		position: absolute;
+		display: block;
+		fill: #dbe0e6;
+		top: -5%;
+		left: 20%;
+		z-index: 1;
+		transform: translate(-50%, -25%) rotate(180deg);
+
+		.stars2 {
+			fill: #dbe0e6;
+			stroke: #dbe0e6;
+			color: #dbe0e6;
+			width: 250px;
+			height: 250px;
+		}
+	}
+
+
+
 }
 
 .container__avatar {
@@ -354,15 +341,16 @@ svg .traingle .polygon-left {
 .wrapper__info-about {
 	position: relative;
 	min-height: 400px;
-    .about__info {
-	    @include tablet {
-		    position: absolute;
-		    top: 20%;
-		    left: 50%;
-		    transform: translateX(-50%);
-		    width: 350px;
-		    background: rgba(#fff, .7);
-		    z-index: 32;
+	.about__info {
+
+		@include tablet {
+			position: absolute;
+			top: 20%;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 350px;
+			background: rgba(#fff, .7);
+			z-index: 32;
 		}
 
 		
@@ -371,14 +359,14 @@ svg .traingle .polygon-left {
 
 .about__info-me {
 	@include hd {
-			width: 50%;
-		}
+		width: 50%;
+	}
 }
 
 .about__info-h2 {
-    font-family: "Roboto-Regular", "Arial", sans-serif;
-    font-size: 21px;
-    line-height: 28px;
+	font-family: "Roboto-Regular", "Arial", sans-serif;
+	font-size: 21px;
+	line-height: 28px;
 	display: block;
 	text-align: center;
 	color: #474b57;
@@ -416,9 +404,9 @@ svg .traingle .polygon-left {
 }
 
 .about__info-text {
-    font-family: "Roboto-Regular", "Arial", sans-serif;
-    font-size: 14px;
-    line-height: 24px;
+	font-family: "Roboto-Regular", "Arial", sans-serif;
+	font-size: 14px;
+	line-height: 24px;
 	color: #474b57;
 	margin-bottom: 55px;
 
@@ -445,14 +433,14 @@ svg .traingle .polygon-left {
 }
 
 .g-circles {
-  fill: none;
-  stroke-width: 20;
+	fill: none;
+	stroke-width: 20;
 }
 
 .sector {
-  stroke: #165ad1;
-  stroke-dasharray: 50 722;
-  transition: all 1s;
+	stroke: #165ad1;
+	stroke-dasharray: 50 722;
+	transition: all 1s;
 }
 
 .skill__container {
@@ -494,9 +482,9 @@ svg .traingle .polygon-left {
 }
 
 .skill__name {
-    font-family: "Roboto-Regular", "Arial", sans-serif;
-    font-size: 21px;
-    line-height: 28px;
+	font-family: "Roboto-Regular", "Arial", sans-serif;
+	font-size: 21px;
+	line-height: 28px;
 	display: block;
 	text-align: center;
 	color: #474b57;
@@ -576,12 +564,12 @@ svg .traingle .polygon-left {
 		}
 		
 		.contact__link {
-		  font-size: 16px;
-		  color: #6b6e78;
-		  display: inline-block;
-		  vertical-align: middle;
-	
-	  }
+			font-size: 16px;
+			color: #6b6e78;
+			display: inline-block;
+			vertical-align: middle;
+
+		}
 	}
 }
 
@@ -596,13 +584,13 @@ svg .traingle .polygon-left {
 	margin: 0 10px 10px 10px;
 	
 	svg {
-	  position: absolute;
-	  top: 0;
-	  left: 0;
-	  right: 0;
-	  bottom: 0;
-	  margin: auto;
-	  display: inline-block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		display: inline-block;
 	}
 }
 
@@ -627,8 +615,8 @@ svg .traingle .polygon-left {
 	min-height: 650px;
 	
 	@include laptop {
-      height: 100vh
-    }
+		height: 100vh
+	}
 }
 
 .footer__about {
@@ -646,12 +634,12 @@ svg .traingle .polygon-left {
 		positon: static;
 	}
 	.aboutMe__list {
-	  font: 14px/24px "Roboto-Medium", "Arial", sans-serif;
+		font: 14px/24px "Roboto-Medium", "Arial", sans-serif;
 	}
 
 	.contact__list {
-	  font: 14px/24px "Roboto-Light", "Arial", sans-serif;
+		font: 14px/24px "Roboto-Light", "Arial", sans-serif;
 	}
-    
+
 
 }

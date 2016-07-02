@@ -147,16 +147,16 @@ $(document).ready(function () {
 ];
 var options = {
   mapTypeControlOptions: {
-    mapTypeIds: [ 'Styled']
+    mapTypeIds: [ 'Koshara Alexandr']
   },
   center: new google.maps.LatLng(44.95650027, 34.10031259),
   zoom: 16,
-  mapTypeId: 'Styled'
+  mapTypeId: 'Koshara Alexandr'
 };
 var div = document.getElementById('google-map');
 var map = new google.maps.Map(div, options);
-var styledMapType = new google.maps.StyledMapType(styles, { name: 'Styled' });
-map.mapTypes.set('Styled', styledMapType);
+var styledMapType = new google.maps.StyledMapType(styles, { name: 'Koshara Alexandr' });
+map.mapTypes.set('Koshara Alexandr', styledMapType);
 
 //добавил маркер на карту
 var imageMarker = 'assets/img/awesome/map_marker.png';
