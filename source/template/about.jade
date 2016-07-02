@@ -74,6 +74,7 @@ html
               include ../images/svg/map_marker.html
             .contact__link Россия, РК, Симферополь
 
-      .background__map
-        footer.footer__container.footer__about
-          include common/footer
+      .background__map.google-maps#google-map
+        include common/google-maps.html
+      footer.footer__container.footer__about
+        include common/footer

@@ -31,10 +31,12 @@ ul {
 
   @include laptop {
     margin-bottom: 300px;
+    width: 350px;
   }
 
   @include desctop {
     margin-bottom: 100px;
+    width: 380px;
   }
 
   @include hd {
@@ -55,18 +57,6 @@ ul {
   backface-visibility: hidden;
 }
 
-.welcome__fontAuth {
-  @include laptop {
-    // width: 748px;
-  }
-
-  @include desctop {
-    // width: 1180px;
-  }
-
-  @include hd {
-  }
-}
 
 .welcome__backAuth {
   font-family: "Roboto-Regular", "Arial", sans-serif;

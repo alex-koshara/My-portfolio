@@ -160,6 +160,7 @@
   transform: translate(-50%,-50%);
   z-index: 32;
   font-size: 0;
+  transition: top .4s;
 
   &:after {
     content: "";
@@ -181,7 +182,7 @@
 
   &:hover {
     top: 46%;
-    transition: top .4s;
+
   }
   
 }
@@ -195,7 +196,7 @@
 
   &:hover {
     top: 54%;
-    transition: top .4s;
+
   }
 }
 

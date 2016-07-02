@@ -323,7 +323,9 @@
 
 	@include hd {
 		font-size: 63px;
+		margin: 0 auto;
 		margin-top: 6px;
+
 	}
 	
 }
@@ -360,6 +362,7 @@ svg .traingle .polygon-left {
 		    transform: translateX(-50%);
 		    width: 350px;
 		    background: rgba(#fff, .7);
+		    z-index: 32;
 		}
 
 		
@@ -524,11 +527,43 @@ svg .traingle .polygon-left {
 }
 
 .css3 {
-	stroke-dasharray: 210 722;
+	stroke-dasharray: 180 722;
 }
 
 .js {
-	stroke-dasharray: 155 722;
+	stroke-dasharray: 78 722;
+}
+
+.php {
+	stroke-dasharray: 5 722;
+}
+
+.my-sql {
+	stroke-dasharray: 15 722;
+}
+
+.node-js {
+	stroke-dasharray: 10 722;
+}
+
+.mongo-db {
+	stroke-dasharray: 0 722;
+}
+
+.git {
+	stroke-dasharray: 156 722;
+}
+
+.gulp {
+	stroke-dasharray: 128 722;
+}
+
+.bower {
+	stroke-dasharray: 100 722;
+}
+
+.null__stroke {
+	stroke-dasharray: 0 722;
 }
 
 .contact__list-about {
@@ -572,7 +607,6 @@ svg .traingle .polygon-left {
 }
 
 .background__map {
-	background: url("../img/bg/map.jpg");
 	min-height: 516px;
 	background-size: cover;
 	display: flex;
@@ -586,6 +620,15 @@ svg .traingle .polygon-left {
 		justify-content: flex-end;
 
 	}
+}
+
+.google-maps {
+	width: 100%;
+	min-height: 650px;
+	
+	@include laptop {
+      height: 100vh
+    }
 }
 
 .footer__about {
