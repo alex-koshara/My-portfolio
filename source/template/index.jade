@@ -6,8 +6,19 @@ html
     <!--[if lt IE 7]> 
     <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
     <![endif]-->
+    
+    .loader
+      //- span.loader-bar 
+      //- svg.loader__svg
+      //-   circle.loader__circle(cx="50" cy="50" r="50")
+      //- svg.loader__svg-small
+      //-   circle.loader__circle-small(cx="5" cy="5" r="5")
+    .index__container.preload__none
+      .no-bg__container
+        img.parallax-img(src="assets/img/bg/no-bg.png" alt="задний фон")
+      video.bg__video(autoplay loop)
+        source(src="assets/video/night.mp4")
 
-    .bg__container
       .wrapper__welcome
         button(type="button")#auth.auth Авторизоваться
         .container__welcome#flipper

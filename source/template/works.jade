@@ -27,23 +27,50 @@ html
           include common/_avatar
 
     
-    .container__slider
+
+
+
+
+    .container__slider.js-slider
       .slider__preview
-        img.slider__preview-img(src="assets/img/works/demoWorks.png")
+        .slider__preview-img
+        ul.slider__list-container
+          li.slider__item(data-id='work1' data-name='Сайт школы' data-description='HTML, CSS, JS' data-link="#first" data-img='assets/img/works/work1.png')
+            img.slider__image(src="assets/img/works/work1.png" alt="Мои работы")
+          li.slider__item(data-id='work2' data-name='WORK2' data-description='HTML, CSS, Jquery' data-link="#second" data-img='assets/img/works/work2.png')
+            img.slider__image(src="assets/img/works/work2.png" alt="Мои работы")
+          li.slider__item(data-id='work3' data-name='WORK3' data-description='HTML, CSS, GULP' data-link="#third" data-img='assets/img/works/work3.png')
+            img.slider__image(src="assets/img/works/work3.png" alt="Мои работы")
+          li.slider__item(data-id='work4' data-name='WORK4' data-description='HTML, CSS, JSON' data-link="#fourth" data-img='assets/img/works/work4.png')
+            img.slider__image(src="assets/img/works/work4.png" alt="Мои работы")
+
+
       .slider__skills
         .wrapper__skills
-          h2.about__info-h2 САЙТ ШКОЛЫ ОНЛАЙН ОБРАЗОВАНИЯ 
+          h2.about__name-h2 САЙТ ШКОЛЫ ОНЛАЙН ОБРАЗОВАНИЯ 
           .slider__skills-text
             | HTML, CSS, JAVASCRIPT
           a.slider__link-show(href="#")
             | Посмотреть сайт
-      .slider__control
-        .slider__control-prev
+
+
+      .slider__controls
+        .slider__control.slider__control-left.js-slider__prev
+          .slider__control-wrapper
+            .slider__control-previw.slider__control-preview-next.js-slider__control-image_next(style="top: -100%; background-image: url('assets/img/works/work4.png');")
+            .slider__control-previw.slider__control-preview-current.js-slider__control-image_current(style="top: 0; background-image: url('assets/img/works/work4.png');")
           a.control__down(href="#") up
-          img.show__slider-img(src="assets/img/works/demo1.jpg")
-        .slider__control-next
+        .slider__control.slider__control-right.js-slider__next  
+          .slider__control-wrapper
+            .slider__control-previw.slider__control-preview-next.js-slider__control-image_next(style="top: 100%; background-image: url('assets/img/works/work2.png');")
+            .slider__control-previw.slider__control-preview-current.js-slider__control-image_current(style="top: 0; background-image: url('assets/img/works/work2.png');")
           a.control__up(href="#") down
-          img.show__slider-img(src="assets/img/works/demo2.jpg")
+          
+
+
+
+
+
 
 
 
@@ -81,9 +108,12 @@ html
       .container__feedback
         h2.about__info-h2.feedback__info-text СВЯЗАТЬСЯ СО МНОЙ
         form.feedback__form
-          input.form__input(type="text", placeholder="Имя")
-          input.form__input(type="text", placeholder="Email")
-          textarea.form__textarea(placeholder="Ваше сообщение")
+          label.form__label
+            input.form__input(type="text" name="name" placeholder="Имя")
+          label.form__label
+            input.form__input(type="text" name="mail" placeholder="Email")
+          label.form__label
+            textarea.form__textarea(name="message" placeholder="Ваше сообщение")
           .wrapper__button
             button.button__inner.button__inner-ok отправить
             button.button__inner.button__inner-cancel отмена

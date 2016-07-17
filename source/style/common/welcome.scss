@@ -7,6 +7,91 @@ ul {
 }
 
 
+@keyframes myOrbit {
+    from { transform: rotate(0deg) translateX(60px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(60px) rotate(-360deg); }
+}
+
+.loader {
+  width: 100%;
+  min-height: 100vh;
+  background: url(../img/preloader/preloader.gif) no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
+.loader__svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  fill: none;
+  width: 350px;
+  height: 350px;
+  padding: 130px;
+}
+
+.loader-bar {
+  position: absolute;
+  color: $white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-30%, -25%);
+}
+
+.loader__circle {
+  // animation: myOrbit 2s linear infinite;
+  stroke: #286f85;
+  stroke-width: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.loader__svg-small {
+  position: absolute;
+  fill: white;
+  width: 30px;
+  height: 30px;
+  animation: myOrbit 2s linear infinite;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.index__container {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding: 25px;
+}
+
+.no-bg__container {
+  position: absolute;
+  height: 100%;
+  width: 2400px;
+  left: 50%;
+  margin-left: - 1200px;
+  bottom: 0%;
+  z-index: 2;
+}
+
+.parallax-img {
+  display: block;
+  position: absolute;
+  bottom: 0;
+}
 
 .bg__container {
   width: 100%;
@@ -15,6 +100,22 @@ ul {
   background-size: cover;
   padding: 20px;
   position: relative;
+  z-index: 100;
+}
+
+.bg__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  // max-width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+.wrapper__welcome {
+  position: relative;
+  z-index: 3;
 }
 
 .container__welcome {
